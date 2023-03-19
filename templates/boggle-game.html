@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/app.css" type="text/css" />
+    <title>Boggle Game</title>
+  </head>
+  <body>
+    <h1>BOGGLE!</h1>
+    <div class="board-container">
+      {% for row in board %} {% for ltr in row %}
+      <div><div>{{ltr}}</div></div>
+      {% endfor %} {% endfor %}
+    </div>
+
+    <form class="word-form">
+      <input name="word" class="word" placeholder="SUBMIT WORD" />
+      <button id="word-btn">Submit</button>
+    </form>
+
+    <p class="word-msg">
+      <!-- Populated by JS function -->
+    </p>
+
+    <p class="score-board">
+      <!-- Populated by JS function -->
+    </p>
+
+    <p class="game-timer">
+      <!-- Changed by JS function -->
+      TIMER = 60 second(s)
+    </p>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script type="text/javascript" src="../static/app.js"></script>
+  </body>
+</html>

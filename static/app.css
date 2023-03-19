@@ -1,0 +1,21 @@
+.board-container {
+  display: flex;
+  border: 1px solid blue;
+  flex-wrap: wrap;
+  width: 250px;
+}
+
+.board-container > div {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid blue;
+}
+
+.board-container > div > div {
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+  flex-direction: row;
+}
